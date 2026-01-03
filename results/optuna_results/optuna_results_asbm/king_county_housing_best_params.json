@@ -1,0 +1,23 @@
+{
+  "dataset": "king_county_housing",
+  "n_trials": 20,
+  "n_samples": 17290,
+  "n_features": 17,
+  "best_trial": 19,
+  "best_value": 0.2685291137648937,
+  "best_params": {
+    "lr_g": 1.0913372612887385e-05,
+    "lr_d": 7.0576137347327615e-06,
+    "num_timesteps": 8,
+    "layers_G": [
+      256,
+      256,
+      384
+    ],
+    "layers_D": [
+      384,
+      256,
+      384
+    ]
+  }
+}

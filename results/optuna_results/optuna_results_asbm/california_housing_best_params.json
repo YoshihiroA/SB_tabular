@@ -1,0 +1,23 @@
+{
+  "dataset": "california_housing",
+  "n_trials": 20,
+  "n_samples": 16512,
+  "n_features": 8,
+  "best_trial": 2,
+  "best_value": 0.5462270420483615,
+  "best_params": {
+    "lr_g": 1.6981971198864144e-06,
+    "lr_d": 0.000338589965139837,
+    "num_timesteps": 8,
+    "layers_G": [
+      512,
+      384,
+      512
+    ],
+    "layers_D": [
+      256,
+      384,
+      128
+    ]
+  }
+}

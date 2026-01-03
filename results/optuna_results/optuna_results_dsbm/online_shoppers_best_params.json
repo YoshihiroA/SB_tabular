@@ -1,0 +1,18 @@
+{
+  "dataset": "online_shoppers",
+  "n_trials": 20,
+  "n_samples": 9864,
+  "n_features": 15,
+  "best_trial": 11,
+  "best_value": 0.21208960340472183,
+  "best_params": {
+    "num_timesteps": 100,
+    "lr": 0.0009608175098837732,
+    "sigma": 1.8118829787731066,
+    "layers": [
+      512,
+      384,
+      128
+    ]
+  }
+}

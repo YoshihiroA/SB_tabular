@@ -1,0 +1,19 @@
+{
+  "dataset": "online_shoppers",
+  "n_trials": 20,
+  "n_samples": 9864,
+  "n_features": 15,
+  "best_trial": 1,
+  "best_value": 0.3806584538194749,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.04097133426491915,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 7,
+    "learning_rate": 0.02522759140041245,
+    "n_estimators": 300,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8
+  }
+}

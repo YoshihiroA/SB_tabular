@@ -1,0 +1,23 @@
+{
+  "dataset": "adult_numeric",
+  "n_trials": 20,
+  "n_samples": 4000,
+  "n_features": 11,
+  "best_trial": 0,
+  "best_value": 0.22375481740134207,
+  "best_params": {
+    "lr_g": 2.190107415561041e-06,
+    "lr_d": 0.000838396165423304,
+    "num_timesteps": 8,
+    "layers_G": [
+      384,
+      512,
+      512
+    ],
+    "layers_D": [
+      256,
+      256,
+      384
+    ]
+  }
+}

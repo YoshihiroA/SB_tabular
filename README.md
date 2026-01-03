@@ -1,1 +1,0 @@
-# Schrodinger-Bridge-for-Tabular-Data

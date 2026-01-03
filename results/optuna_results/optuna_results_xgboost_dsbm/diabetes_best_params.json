@@ -1,0 +1,19 @@
+{
+  "dataset": "diabetes",
+  "n_trials": 20,
+  "n_samples": 353,
+  "n_features": 10,
+  "best_trial": 15,
+  "best_value": 0.21676492887578888,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.03185945499059829,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 8,
+    "learning_rate": 0.057270820058133845,
+    "n_estimators": 300,
+    "subsample": 0.6198856406164459,
+    "colsample_bytree": 0.6976328640824316
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "california_housing": {
+    "dataset": "california_housing",
+    "n_trials": 20,
+    "n_samples": 16512,
+    "n_features": 8,
+    "best_trial": 0,
+    "best_value": 0.127362,
+    "best_params": {
+      "num_timesteps": 125,
+      "lr": 0.0007114476009343421,
+      "sigma": 0.48343714531846416,
+      "layers": [384, 128, 128]
+    }
+  },
+  "diabetes": {
+    "dataset": "diabetes",
+    "n_trials": 20,
+    "n_samples": 353,
+    "n_features": 10,
+    "best_trial": 0,
+    "best_value": 0.184188,
+    "best_params": {
+      "num_timesteps": 175,
+      "lr": 1.4285771830109758e-05,
+      "sigma": 0.6783428472054562,
+      "layers": [512, 512, 128]
+    }
+  },
+  "online_news_popularity": {
+    "dataset": "online_news_popularity",
+    "n_trials": 20,
+    "n_samples": 39644,
+    "n_features": 58,
+    "best_trial": 0,
+    "best_value": 0.100229,
+    "best_params": {
+      "num_timesteps": 175,
+      "lr": 3.247673570627449e-06,
+      "sigma": 0.014115155493448345,
+      "layers": [512, 512, 512]
+    }
+  },
+  "king_county_housing": {
+    "dataset": "king_county_housing",
+    "n_trials": 20,
+    "n_samples": 16209,
+    "n_features": 19,
+    "best_trial": 0,
+    "best_value": 0.164390,
+    "best_params": {
+      "num_timesteps": 125,
+      "lr": 0.0001820623582407962,
+      "sigma": 0.04492928409292808,
+      "layers": [384, 384, 384]
+    }
+  },
+  "adult_numeric": {
+    "dataset": "adult_numeric",
+    "n_trials": 20,
+    "n_samples": 30718,
+    "n_features": 13,
+    "best_trial": 0,
+    "best_value": 0.100149,
+    "best_params": {
+      "num_timesteps": 125,
+      "lr": 0.00037407716318910156,
+      "sigma": 0.05159369727333987,
+      "layers": [256, 384, 512]
+    }
+  },
+  "bank_marketing": {
+    "dataset": "bank_marketing",
+    "n_trials": 20,
+    "n_samples": 41188,
+    "n_features": 20,
+    "best_trial": 0,
+    "best_value": 0.11982475250634887,
+    "best_params": {
+      "num_timesteps": 125,
+      "lr": 0.0007114476009343421,
+      "sigma": 0.48343714531846416,
+      "layers": [384, 128, 128]
+    }
+  },
+  "online_shoppers": {
+    "dataset": "online_shoppers",
+    "n_trials": 20,
+    "n_features": 15,
+    "best_trial": 11,
+    "best_value": 0.21208960340472183,
+    "best_params": {
+      "num_timesteps": 100,
+      "lr": 0.0009608175098837732,
+      "sigma": 1.8118829787731066,
+      "layers": [
+        512,
+        384,
+        128
+      ]
+    }
+  },
+  "covertype": {
+    "dataset": "covertype",
+    "n_trials": 20,
+    "n_features": 54,
+    "best_trial": 2,
+    "best_value": 0.41624746635666904,
+    "best_params": {
+      "num_timesteps": 200,
+      "lr": 2.5766311046198177e-05,
+      "sigma": 0.2646757502727413,
+      "layers": [
+        256,
+        512,
+        384
+      ]
+    }
+  },
+  "german_credit": {
+    "dataset": "german_credit",
+    "n_trials": 20,
+    "n_features": 7,
+    "best_trial": 10,
+    "best_value": 0.11921742799280356,
+    "best_params": {
+      "num_timesteps": 200,
+      "lr": 0.0005927797691666162,
+      "sigma": 0.44922612563144765,
+      "layers": [
+        128,
+        512,
+        384
+      ]
+    }
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "california_housing": {
+    "dataset": "california_housing",
+    "n_samples": 16512,
+    "n_features": 7,
+    "best_params": {
+      "lr_g": 1.6981971198864144e-06,
+      "lr_d": 0.000338589965139837,
+      "num_timesteps": 8,
+      "layers_G": [
+        512,
+        384,
+        512
+      ],
+      "layers_D": [
+        256,
+        384,
+        128
+      ]
+    },
+    "metrics": {
+      "mmd": 0.05770574744336598,
+      "kl_divergence": 0.1255956927468001,
+      "wasserstein_distance": 0.07598163405421239,
+      "frobenius_norm": 1.303288245081672,
+      "marginal_kl_mean": 0.1255956927468001,
+      "marginal_js_mean": 0.12302410073439408,
+      "r2_score_real": 0.9467642172940507,
+      "r2_score_synth": 0.9025567723902284,
+      "rmse_real": 0.22942139996747016,
+      "rmse_synth": 0.31039015231905753,
+      "mse_real": 0.05263417876303392,
+      "mse_synth": 0.09634204665664772,
+      "mae_real": 0.1435793380254039,
+      "mae_synth": 0.22709322822349
+    }
+  },
+  "diabetes": {
+    "dataset": "diabetes",
+    "n_samples": 353,
+    "n_features": 9,
+    "best_params": {
+      "lr_g": 4.818070044132933e-06,
+      "lr_d": 0.0005170005821215873,
+      "num_timesteps": 6,
+      "layers_G": [
+        384,
+        512,
+        384
+      ],
+      "layers_D": [
+        128,
+        384,
+        256
+      ]
+    },
+    "metrics": {
+      "mmd": 0.07606291183095429,
+      "kl_divergence": 0.8729619209762992,
+      "wasserstein_distance": 0.12058105987827124,
+      "frobenius_norm": 0.6822742095681751,
+      "marginal_kl_mean": 0.8729619209762992,
+      "marginal_js_mean": 0.29525968948549514,
+      "r2_score_real": 0.11412644338859546,
+      "r2_score_synth": 0.1343064237726358,
+      "rmse_real": 0.8510083384387012,
+      "rmse_synth": 0.84125962059567,
+      "mse_real": 0.724215192092199,
+      "mse_synth": 0.7077177492447707,
+      "mae_real": 0.6856760484579139,
+      "mae_synth": 0.6774089051601142
+    }
+  },
+  "online_news_popularity": {
+    "dataset": "online_news_popularity",
+    "n_samples": 31715,
+    "n_features": 58,
+    "best_params": {
+      "lr_g": 0.00010154192087587338,
+      "lr_d": 0.00011158608543219417,
+      "num_timesteps": 8,
+      "layers_G": [
+        384,
+        256,
+        256
+      ],
+      "layers_D": [
+        256,
+        256,
+        256
+      ]
+    },
+    "metrics": {
+      "mmd": 0.008276983149873279,
+      "kl_divergence": 0.7467477865561905,
+      "wasserstein_distance": 0.2770507445602817,
+      "frobenius_norm": 5.659696439867628,
+      "marginal_kl_mean": 0.7467477865561905,
+      "marginal_js_mean": 0.35815441812695376,
+      "r2_score_real": -0.00548066768637101,
+      "r2_score_synth": -0.03792560035443526,
+      "rmse_real": 0.9349343719361883,
+      "rmse_synth": 0.9498988808809699,
+      "mse_real": 0.8741022798277149,
+      "mse_synth": 0.9023078838989189,
+      "mae_real": 0.2662234426179495,
+      "mae_synth": 0.27212636550368247
+    }
+  },
+  "king_county_housing": {
+    "dataset": "king_county_housing",
+    "n_samples": 17290,
+    "n_features": 16,
+    "best_params": {
+      "lr_g": 1.0913372612887385e-05,
+      "lr_d": 7.0576137347327615e-06,
+      "num_timesteps": 8,
+      "layers_G": [
+        256,
+        256,
+        384
+      ],
+      "layers_D": [
+        384,
+        256,
+        384
+      ]
+    },
+    "metrics": {
+      "mmd": 0.05929580808311469,
+      "kl_divergence": 0.5846688352484912,
+      "wasserstein_distance": 0.19999843648697355,
+      "frobenius_norm": 1.9963557801278136,
+      "marginal_kl_mean": 0.5846688352484912,
+      "marginal_js_mean": 0.33102043911893536,
+      "r2_score_real": 0.5448638372781953,
+      "r2_score_synth": 0.2111768728700053,
+      "rmse_real": 0.6470964002159761,
+      "rmse_synth": 0.8518990413711044,
+      "mse_real": 0.4187337511724748,
+      "mse_synth": 0.7257319766890067,
+      "mae_real": 0.15754191265493567,
+      "mae_synth": 0.30880283155909033
+    }
+  },
+  "adult_numeric": {
+    "dataset": "adult_numeric",
+    "n_samples": 4000,
+    "n_features": 10,
+    "best_params": {
+      "lr_g": 2.190107415561041e-06,
+      "lr_d": 0.000838396165423304,
+      "num_timesteps": 8,
+      "layers_G": [
+        384,
+        512,
+        512
+      ],
+      "layers_D": [
+        256,
+        256,
+        384
+      ]
+    },
+    "metrics": {
+      "mmd": 0.05509454541727635,
+      "kl_divergence": 0.9417669748853654,
+      "wasserstein_distance": 0.22912006982621486,
+      "frobenius_norm": 0.3413802159171774,
+      "marginal_kl_mean": 0.9417669748853654,
+      "marginal_js_mean": 0.3869494916204056,
+      "r2_score_real": 0.04355085582394236,
+      "r2_score_synth": -0.10830651896520993,
+      "rmse_real": 0.9755461829161421,
+      "rmse_synth": 1.0501391180034774,
+      "mse_real": 0.9516903550022551,
+      "mse_synth": 1.1027921671611212,
+      "mae_real": 0.829423260588552,
+      "mae_synth": 0.7464607847724026
+    }
+  },
+  "bank_marketing": {
+    "dataset": "bank_marketing",
+    "n_samples": 8000,
+    "n_features": 6,
+    "best_params": {
+      "lr_g": 1.1233404548048253e-05,
+      "lr_d": 2.844723235980858e-05,
+      "num_timesteps": 6,
+      "layers_G": [
+        256,
+        256,
+        512
+      ],
+      "layers_D": [
+        256,
+        128,
+        256
+      ]
+    },
+    "metrics": {
+      "mmd": 0.06980487102986586,
+      "kl_divergence": 0.12949489865582028,
+      "wasserstein_distance": 0.11643261200841033,
+      "frobenius_norm": 0.40083179799172697,
+      "marginal_kl_mean": 0.12949489865582028,
+      "marginal_js_mean": 0.1538823219581056,
+      "r2_score_real": 0.3798289106979076,
+      "r2_score_synth": 0.21602371633741513,
+      "rmse_real": 0.6661772097144119,
+      "rmse_synth": 0.7490063079427591,
+      "mse_real": 0.44379207474287946,
+      "mse_synth": 0.5610104493380433,
+      "mae_real": 0.19092154933694233,
+      "mae_synth": 0.20851326283955404
+    }
+  },
+  "online_shoppers": {
+    "dataset": "online_shoppers",
+    "n_samples": 9864,
+    "n_features": 14,
+    "best_params": {
+      "lr_g": 2.1236211266395326e-05,
+      "lr_d": 0.0003210533600765207,
+      "num_timesteps": 8,
+      "layers_G": [
+        512,
+        512,
+        512
+      ],
+      "layers_D": [
+        256,
+        128,
+        256
+      ]
+    },
+    "metrics": {
+      "mmd": 0.11194093011296896,
+      "kl_divergence": 0.6647129719050439,
+      "wasserstein_distance": 0.2356616990758669,
+      "frobenius_norm": 0.8167529150505429,
+      "marginal_kl_mean": 0.6647129719050439,
+      "marginal_js_mean": 0.3667859471059548,
+      "r2_score_real": 0.05039822267505678,
+      "r2_score_synth": -0.4833429012290893,
+      "rmse_real": 1.007814981973209,
+      "rmse_synth": 1.2595947145045463,
+      "mse_real": 1.0156910378896593,
+      "mse_synth": 1.5865788448077895,
+      "mae_real": 0.8025933720481877,
+      "mae_synth": 0.839685843953316
+    }
+  },
+  "covertype": {
+    "dataset": "covertype",
+    "n_samples": 8000,
+    "n_features": 53,
+    "best_params": {
+      "lr_g": 0.00021280185979340562,
+      "lr_d": 8.946059797623339e-06,
+      "num_timesteps": 6,
+      "layers_G": [
+        256,
+        384,
+        256
+      ],
+      "layers_D": [
+        384,
+        128,
+        128
+      ]
+    },
+    "metrics": {
+      "mmd": 0.0524218347686937,
+      "kl_divergence": 1.136529934369471,
+      "wasserstein_distance": 0.5672934828262817,
+      "frobenius_norm": 7.626835808230264,
+      "marginal_kl_mean": 1.136529934369471,
+      "marginal_js_mean": 0.5267640040565854,
+      "r2_score_real": 0.7660742928661122,
+      "r2_score_synth": 0.0008731364467622349,
+      "rmse_real": 0.5141516339635739,
+      "rmse_synth": 1.0625822644775846,
+      "mse_real": 0.2643519027074128,
+      "mse_synth": 1.1290810687823114,
+      "mae_real": 0.10458544991556246,
+      "mae_synth": 0.3107583142940476
+    }
+  },
+  "german_credit": {
+    "dataset": "german_credit",
+    "n_samples": 800,
+    "n_features": 6,
+    "best_params": {
+      "lr_g": 6.708803901933638e-05,
+      "lr_d": 4.949311308131061e-05,
+      "num_timesteps": 6,
+      "layers_G": [
+        512,
+        384,
+        256
+      ],
+      "layers_D": [
+        384,
+        384,
+        128
+      ]
+    },
+    "metrics": {
+      "mmd": 0.10090583880567282,
+      "kl_divergence": 1.1355745843842366,
+      "wasserstein_distance": 0.2121041532595908,
+      "frobenius_norm": 0.5548688162655907,
+      "marginal_kl_mean": 1.1355745843842366,
+      "marginal_js_mean": 0.4693671972894268,
+      "r2_score_real": -0.04109526405307351,
+      "r2_score_synth": -0.15829159168265639,
+      "rmse_real": 1.1633248265767633,
+      "rmse_synth": 1.227056931066978,
+      "mse_real": 1.3533246521298565,
+      "mse_synth": 1.5056687120795105,
+      "mae_real": 0.7938735735499294,
+      "mae_synth": 0.7871523199614698
+    }
+  }
+}

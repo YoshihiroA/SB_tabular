@@ -1,0 +1,18 @@
+{
+  "dataset": "bank_marketing",
+  "n_trials": 20,
+  "n_samples": 8000,
+  "n_features": 7,
+  "best_trial": 14,
+  "best_value": 0.2413228582314803,
+  "best_params": {
+    "num_timesteps": 100,
+    "lr": 0.0002740313069218923,
+    "sigma": 1.6947783639783436,
+    "layers": [
+      512,
+      384,
+      384
+    ]
+  }
+}

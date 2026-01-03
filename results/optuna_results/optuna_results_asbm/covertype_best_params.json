@@ -1,0 +1,23 @@
+{
+  "dataset": "covertype",
+  "n_trials": 20,
+  "n_samples": 8000,
+  "n_features": 54,
+  "best_trial": 19,
+  "best_value": 0.3794652780577306,
+  "best_params": {
+    "lr_g": 0.00021280185979340562,
+    "lr_d": 8.946059797623339e-06,
+    "num_timesteps": 6,
+    "layers_G": [
+      256,
+      384,
+      256
+    ],
+    "layers_D": [
+      384,
+      128,
+      128
+    ]
+  }
+}

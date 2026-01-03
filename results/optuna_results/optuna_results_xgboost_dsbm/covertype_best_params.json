@@ -1,0 +1,19 @@
+{
+  "dataset": "covertype",
+  "n_trials": 20,
+  "n_samples": 8000,
+  "n_features": 54,
+  "best_trial": 8,
+  "best_value": 0.35620046049942905,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.4160894921944404,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 6,
+    "learning_rate": 0.09782060427153436,
+    "n_estimators": 300,
+    "subsample": 0.836088639738088,
+    "colsample_bytree": 0.8143928979410806
+  }
+}

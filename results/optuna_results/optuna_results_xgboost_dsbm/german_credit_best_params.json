@@ -1,0 +1,19 @@
+{
+  "dataset": "german_credit",
+  "n_trials": 20,
+  "n_samples": 800,
+  "n_features": 7,
+  "best_trial": 1,
+  "best_value": 0.18313073678492753,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.2881700399525985,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 7,
+    "learning_rate": 0.017588568033720726,
+    "n_estimators": 300,
+    "subsample": 0.5145069122121801,
+    "colsample_bytree": 0.8668741481401414
+  }
+}

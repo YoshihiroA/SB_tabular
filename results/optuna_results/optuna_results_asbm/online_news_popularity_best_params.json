@@ -1,0 +1,23 @@
+{
+  "dataset": "online_news_popularity",
+  "n_trials": 20,
+  "n_samples": 31715,
+  "n_features": 59,
+  "best_trial": 10,
+  "best_value": 0.3618067928853607,
+  "best_params": {
+    "lr_g": 0.00010154192087587338,
+    "lr_d": 0.00011158608543219417,
+    "num_timesteps": 8,
+    "layers_G": [
+      384,
+      256,
+      256
+    ],
+    "layers_D": [
+      256,
+      256,
+      256
+    ]
+  }
+}

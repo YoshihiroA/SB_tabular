@@ -1,0 +1,23 @@
+{
+  "dataset": "german_credit",
+  "n_trials": 20,
+  "n_samples": 800,
+  "n_features": 7,
+  "best_trial": 19,
+  "best_value": 0.259559697603617,
+  "best_params": {
+    "lr_g": 6.708803901933638e-05,
+    "lr_d": 4.949311308131061e-05,
+    "num_timesteps": 6,
+    "layers_G": [
+      512,
+      384,
+      256
+    ],
+    "layers_D": [
+      384,
+      384,
+      128
+    ]
+  }
+}

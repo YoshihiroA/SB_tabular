@@ -1,0 +1,19 @@
+{
+  "dataset": "california_housing",
+  "n_trials": 20,
+  "n_samples": 16512,
+  "n_features": 8,
+  "best_trial": 5,
+  "best_value": 0.4516488285484761,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.13735424765437482,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 5,
+    "learning_rate": 0.11594465739292677,
+    "n_estimators": 300,
+    "subsample": 0.6490017503443813,
+    "colsample_bytree": 0.6311524112981908
+  }
+}

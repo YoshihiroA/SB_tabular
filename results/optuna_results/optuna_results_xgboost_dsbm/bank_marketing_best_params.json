@@ -1,0 +1,19 @@
+{
+  "dataset": "bank_marketing",
+  "n_trials": 20,
+  "n_samples": 8000,
+  "n_features": 7,
+  "best_trial": 13,
+  "best_value": 0.292227996672043,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.09212748555987632,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 5,
+    "learning_rate": 0.19215618238229173,
+    "n_estimators": 300,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "california_housing": {
+    "dataset": "california_housing",
+    "n_samples": 16512,
+    "n_features": 7,
+    "best_params": {
+      "num_timesteps": 125,
+      "lr": 0.0007114476009343421,
+      "sigma": 0.48343714531846416,
+      "layers": [
+        384,
+        128,
+        128
+      ]
+    },
+    "metrics": {
+      "mmd": 0.0316382177765193,
+      "kl_divergence": 0.067215691612598,
+      "wasserstein_distance": 0.0682525048359405,
+      "frobenius_norm": 0.8401022317248411,
+      "marginal_kl_mean": 0.067215691612598,
+      "marginal_js_mean": 0.08831866663122107,
+      "r2_score_real": 0.9467642172940507,
+      "r2_score_synth": 0.9237697045193287,
+      "rmse_real": 0.22942139996747016,
+      "rmse_synth": 0.2745338529934112,
+      "mse_real": 0.05263417876303392,
+      "mse_synth": 0.07536883643940792,
+      "mae_real": 0.1435793380254039,
+      "mae_synth": 0.18098096646717532
+    }
+  },
+  "diabetes": {
+    "dataset": "diabetes",
+    "n_samples": 353,
+    "n_features": 9,
+    "best_params": {
+      "num_timesteps": 175,
+      "lr": 1.4285771830109758e-05,
+      "sigma": 0.6783428472054562,
+      "layers": [
+        512,
+        512,
+        128
+      ]
+    },
+    "metrics": {
+      "mmd": 0.08221076001108865,
+      "kl_divergence": 0.829129700762369,
+      "wasserstein_distance": 0.14776682763392762,
+      "frobenius_norm": 0.4340549854982265,
+      "marginal_kl_mean": 0.829129700762369,
+      "marginal_js_mean": 0.3001730865777236,
+      "r2_score_real": 0.11412644338859546,
+      "r2_score_synth": 0.0025720783294365113,
+      "rmse_real": 0.8510083384387012,
+      "rmse_synth": 0.9030019894924048,
+      "mse_real": 0.724215192092199,
+      "mse_synth": 0.8154125930272412,
+      "mae_real": 0.6856760484579139,
+      "mae_synth": 0.7338955067577401
+    }
+  },
+  "online_news_popularity": {
+    "dataset": "online_news_popularity",
+    "n_samples": 31715,
+    "n_features": 58,
+    "best_params": {
+      "num_timesteps": 175,
+      "lr": 3.247673570627449e-06,
+      "sigma": 0.014115155493448345,
+      "layers": [
+        512,
+        512,
+        512
+      ]
+    },
+    "metrics": {
+      "mmd": 0.00824172931654141,
+      "kl_divergence": 1.2643941292154126,
+      "wasserstein_distance": 0.493282850788848,
+      "frobenius_norm": 8.218536993903486,
+      "marginal_kl_mean": 1.2643941292154126,
+      "marginal_js_mean": 0.47345875757322603,
+      "r2_score_real": -0.00548066768637101,
+      "r2_score_synth": -0.04186090373140905,
+      "rmse_real": 0.9349343719361883,
+      "rmse_synth": 0.951697951872403,
+      "mse_real": 0.8741022798277149,
+      "mse_synth": 0.9057289915981267,
+      "mae_real": 0.2662234426179495,
+      "mae_synth": 0.3221676583361019
+    }
+  },
+  "king_county_housing": {
+    "dataset": "king_county_housing",
+    "n_samples": 17290,
+    "n_features": 16,
+    "best_params": {
+      "num_timesteps": 125,
+      "lr": 0.0001820623582407962,
+      "sigma": 0.04492928409292808,
+      "layers": [
+        384,
+        384,
+        384
+      ]
+    },
+    "metrics": {
+      "mmd": 0.07927801422264434,
+      "kl_divergence": 0.8262751505225631,
+      "wasserstein_distance": 0.3047517602124758,
+      "frobenius_norm": 1.2470785758338836,
+      "marginal_kl_mean": 0.8262751505225631,
+      "marginal_js_mean": 0.39705783122440824,
+      "r2_score_real": 0.5448638372781953,
+      "r2_score_synth": 0.44457112267381416,
+      "rmse_real": 0.6470964002159761,
+      "rmse_synth": 0.714846079631531,
+      "mse_real": 0.4187337511724748,
+      "mse_synth": 0.5110049175645692,
+      "mae_real": 0.15754191265493567,
+      "mae_synth": 0.25081471544662487
+    }
+  },
+  "adult_numeric": {
+    "dataset": "adult_numeric",
+    "n_samples": 4000,
+    "n_features": 10,
+    "best_params": {
+      "num_timesteps": 125,
+      "lr": 0.00037407716318910156,
+      "sigma": 0.05159369727333987,
+      "layers": [
+        256,
+        384,
+        512
+      ]
+    },
+    "metrics": {
+      "mmd": 0.05221672450986333,
+      "kl_divergence": 0.8241288426388763,
+      "wasserstein_distance": 0.2167522440216681,
+      "frobenius_norm": 0.5386985577197051,
+      "marginal_kl_mean": 0.8241288426388763,
+      "marginal_js_mean": 0.4004634890832047,
+      "r2_score_real": 0.04355085582394236,
+      "r2_score_synth": -0.0627790999418738,
+      "rmse_real": 0.9755461829161421,
+      "rmse_synth": 1.0283439447434286,
+      "mse_real": 0.9516903550022551,
+      "mse_synth": 1.0574912686904758,
+      "mae_real": 0.829423260588552,
+      "mae_synth": 0.6988956631006817
+    }
+  },
+  "bank_marketing": {
+    "dataset": "bank_marketing",
+    "n_samples": 8000,
+    "n_features": 6,
+    "best_params": {
+      "num_timesteps": 125,
+      "lr": 0.0007114476009343421,
+      "sigma": 0.48343714531846416,
+      "layers": [
+        384,
+        128,
+        128
+      ]
+    },
+    "metrics": {
+      "mmd": 0.023995525215561225,
+      "kl_divergence": 0.09932848698392349,
+      "wasserstein_distance": 0.06211410316680727,
+      "frobenius_norm": 0.15248859009023757,
+      "marginal_kl_mean": 0.09932848698392349,
+      "marginal_js_mean": 0.12786699484491587,
+      "r2_score_real": 0.3798289106979076,
+      "r2_score_synth": 0.409618684668108,
+      "rmse_real": 0.6661772097144119,
+      "rmse_synth": 0.6499804810117791,
+      "mse_real": 0.44379207474287946,
+      "mse_synth": 0.42247462569630373,
+      "mae_real": 0.19092154933694233,
+      "mae_synth": 0.16882292947547142
+    }
+  },
+  "online_shoppers": {
+    "dataset": "online_shoppers",
+    "n_samples": 9864,
+    "n_features": 14,
+    "best_params": {
+      "num_timesteps": 100,
+      "lr": 0.0009608175098837732,
+      "sigma": 1.8118829787731066,
+      "layers": [
+        512,
+        384,
+        128
+      ]
+    },
+    "metrics": {
+      "mmd": 0.04778361376556877,
+      "kl_divergence": 0.7487330137941067,
+      "wasserstein_distance": 0.18129162021641937,
+      "frobenius_norm": 0.5618272639121347,
+      "marginal_kl_mean": 0.7487330137941067,
+      "marginal_js_mean": 0.4095180243940444,
+      "r2_score_real": 0.05039822267505678,
+      "r2_score_synth": -0.08065191072555966,
+      "rmse_real": 1.007814981973209,
+      "rmse_synth": 1.0751101540613595,
+      "mse_real": 1.0156910378896593,
+      "mse_synth": 1.1558618433658403,
+      "mae_real": 0.8025933720481877,
+      "mae_synth": 0.9634161656109135
+    }
+  },
+  "covertype": {
+    "dataset": "covertype",
+    "n_samples": 8000,
+    "n_features": 53,
+    "best_params": {
+      "num_timesteps": 200,
+      "lr": 2.5766311046198177e-05,
+      "sigma": 0.2646757502727413,
+      "layers": [
+        256,
+        512,
+        384
+      ]
+    },
+    "metrics": {
+      "mmd": 0.05236100696893567,
+      "kl_divergence": 1.7072527906408832,
+      "wasserstein_distance": 0.4624123632425498,
+      "frobenius_norm": 5.839152240746497,
+      "marginal_kl_mean": 1.7072527906408832,
+      "marginal_js_mean": 0.5498554667362986,
+      "r2_score_real": 0.7660742928661122,
+      "r2_score_synth": -0.04337775368359975,
+      "rmse_real": 0.5141516339635739,
+      "rmse_synth": 1.085857989613378,
+      "mse_real": 0.2643519027074128,
+      "mse_synth": 1.1790875736072068,
+      "mae_real": 0.10458544991556246,
+      "mae_synth": 0.21766250841287232
+    }
+  },
+  "german_credit": {
+    "dataset": "german_credit",
+    "n_samples": 800,
+    "n_features": 6,
+    "best_params": {
+      "num_timesteps": 200,
+      "lr": 0.0005927797691666162,
+      "sigma": 0.44922612563144765,
+      "layers": [
+        128,
+        512,
+        384
+      ]
+    },
+    "metrics": {
+      "mmd": 0.035035885444667736,
+      "kl_divergence": 0.7748054043696414,
+      "wasserstein_distance": 0.08522320555024109,
+      "frobenius_norm": 0.22451027459760056,
+      "marginal_kl_mean": 0.7748054043696414,
+      "marginal_js_mean": 0.40985533499294674,
+      "r2_score_real": -0.04109526405307351,
+      "r2_score_synth": -0.08403121097214461,
+      "rmse_real": 1.1633248265767633,
+      "rmse_synth": 1.187070887676812,
+      "mse_real": 1.3533246521298565,
+      "mse_synth": 1.4091372923698142,
+      "mae_real": 0.7938735735499294,
+      "mae_synth": 0.7765078285916386
+    }
+  }
+}

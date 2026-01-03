@@ -1,0 +1,154 @@
+{
+  "r2_score_real": {
+    "mean_of_means": -0.24846158822377518,
+    "std_of_means": 0.830592893229766,
+    "mean_of_stds": 0.6917686560493698,
+    "min": -2.127591109275818,
+    "max": 0.9356366038322449,
+    "datasets_count": 9
+  },
+  "r2_score_synth": {
+    "mean_of_means": -0.0019630538092719318,
+    "std_of_means": 0.41832087379261845,
+    "mean_of_stds": 0.22689626320293296,
+    "min": -0.42173947095870973,
+    "max": 0.883223295211792,
+    "datasets_count": 9
+  },
+  "rmse_real": {
+    "mean_of_means": 3035.222927677158,
+    "std_of_means": 5838.552086322678,
+    "mean_of_stds": 689.9377263078036,
+    "min": 0.05652865364741601,
+    "max": 16547.141912259078,
+    "datasets_count": 9
+  },
+  "rmse_synth": {
+    "mean_of_means": 2704.565173549944,
+    "std_of_means": 5653.188972020602,
+    "mean_of_stds": 308.4455731691772,
+    "min": 0.04943596568699849,
+    "max": 17521.87201248546,
+    "datasets_count": 9
+  },
+  "ml_efficiency_gap_percent": {
+    "mean_of_means": 153.9375211781141,
+    "std_of_means": 112.78870133577553,
+    "mean_of_stds": 164.89919249076064,
+    "min": 5.598798715434232,
+    "max": 367.0852162107944,
+    "datasets_count": 9
+  },
+  "ks_statistic_mean": {
+    "mean_of_means": 0.4264287848947995,
+    "std_of_means": 0.10804342044735252,
+    "mean_of_stds": 0.019261164192235072,
+    "min": 0.19409087763012184,
+    "max": 0.5836075471698112,
+    "datasets_count": 9
+  },
+  "wasserstein_distance": {
+    "mean_of_means": 378.2646343208107,
+    "std_of_means": 738.2222994426409,
+    "mean_of_stds": 27.008331874841858,
+    "min": 0.023242433679600556,
+    "max": 2432.9814464876567,
+    "datasets_count": 9
+  },
+  "mmd": {
+    "mean_of_means": 0.03924518950307057,
+    "std_of_means": 0.03884364082760143,
+    "mean_of_stds": 0.010352714678568393,
+    "min": 0.01255599908308056,
+    "max": 0.14299415149335457,
+    "datasets_count": 9
+  },
+  "kl_divergence": {
+    "mean_of_means": 3.332952811493086,
+    "std_of_means": 3.7225498878596137,
+    "mean_of_stds": 0.5707316750627637,
+    "min": 0.4498932223965917,
+    "max": 11.492143126618034,
+    "datasets_count": 9
+  },
+  "js_divergence": {
+    "mean_of_means": 0.14654516349398172,
+    "std_of_means": 0.11128214188860724,
+    "mean_of_stds": 0.012876148415480293,
+    "min": 0.022511675582311118,
+    "max": 0.3928873708829431,
+    "datasets_count": 9
+  },
+  "swd": {
+    "mean_of_means": 2529.584341215233,
+    "std_of_means": 4789.008943279621,
+    "mean_of_stds": 248.49430190593245,
+    "min": 0.030410642488640876,
+    "max": 15297.080110086454,
+    "datasets_count": 9
+  },
+  "correlation_similarity": {
+    "mean_of_means": 0.642150684366792,
+    "std_of_means": 0.2071361186477862,
+    "mean_of_stds": 0.03861165175141998,
+    "min": 0.22427427535088534,
+    "max": 0.8271993893456748,
+    "datasets_count": 9
+  },
+  "pairwise_correlation_diff": {
+    "mean_of_means": 4.941555333695527,
+    "std_of_means": 2.84110037419118,
+    "mean_of_stds": 0.4591111108466231,
+    "min": 1.878679390035486,
+    "max": 10.022435417968135,
+    "datasets_count": 9
+  },
+  "correlation_distance": {
+    "mean_of_means": 4.941555333695527,
+    "std_of_means": 2.84110037419118,
+    "mean_of_stds": 0.4591111108466231,
+    "min": 1.878679390035486,
+    "max": 10.022435417968135,
+    "datasets_count": 9
+  },
+  "dcr_mean": {
+    "mean_of_means": 4532.078242011865,
+    "std_of_means": 12353.698602064702,
+    "mean_of_stds": 235.1854840260069,
+    "min": 0.0673587441444397,
+    "max": 39463.0453125,
+    "datasets_count": 9
+  },
+  "dcr_median": {
+    "mean_of_means": 4183.302823004622,
+    "std_of_means": 11533.254076897365,
+    "mean_of_stds": 200.50272298450807,
+    "min": 0.06840649992227554,
+    "max": 36800.6875,
+    "datasets_count": 9
+  },
+  "dcr_share": {
+    "mean_of_means": 0.47403347865944817,
+    "std_of_means": 0.06112331680758532,
+    "mean_of_stds": 0.08195819478951272,
+    "min": 0.3734,
+    "max": 0.5481647018031325,
+    "datasets_count": 9
+  },
+  "identical_matches_fraction": {
+    "mean_of_means": 0.0,
+    "std_of_means": 0.0,
+    "mean_of_stds": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "datasets_count": 9
+  },
+  "authenticity": {
+    "mean_of_means": 0.5531917717594224,
+    "std_of_means": 0.21221500087777995,
+    "mean_of_stds": 0.07012309343432933,
+    "min": 0.31899999999999995,
+    "max": 0.9607066045538515,
+    "datasets_count": 9
+  }
+}

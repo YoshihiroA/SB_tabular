@@ -1,0 +1,23 @@
+{
+  "dataset": "diabetes",
+  "n_trials": 20,
+  "n_samples": 353,
+  "n_features": 10,
+  "best_trial": 19,
+  "best_value": 0.18846428250156383,
+  "best_params": {
+    "lr_g": 4.818070044132933e-06,
+    "lr_d": 0.0005170005821215873,
+    "num_timesteps": 6,
+    "layers_G": [
+      384,
+      512,
+      384
+    ],
+    "layers_D": [
+      128,
+      384,
+      256
+    ]
+  }
+}
