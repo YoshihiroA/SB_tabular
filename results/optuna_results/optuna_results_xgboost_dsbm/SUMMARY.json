@@ -1,44 +1,173 @@
 {
-  "o": {
-    "error": "'o'"
-  },
-  "n": {
-    "error": "'n'"
-  },
-  "l": {
-    "error": "'l'"
-  },
-  "i": {
-    "error": "'i'"
-  },
-  "e": {
-    "error": "'e'"
-  },
-  "_": {
-    "error": "'_'"
-  },
-  "w": {
-    "error": "'w'"
-  },
-  "s": {
-    "error": "'s'"
-  },
-  "p": {
-    "error": "'p'"
-  },
-  "u": {
-    "error": "'u'"
-  },
-  "a": {
-    "error": "'a'"
-  },
-  "r": {
-    "error": "'r'"
-  },
-  "t": {
-    "error": "'t'"
-  },
-  "y": {
-    "error": "'y'"
+  "online_shoppers": {
+  "dataset": "online_shoppers",
+  "n_trials": 20,
+  "n_samples": 9864,
+  "n_features": 15,
+  "best_trial": 1,
+  "best_value": 0.3806584538194749,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.04097133426491915,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 7,
+    "learning_rate": 0.02522759140041245,
+    "n_estimators": 300,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8
   }
+},
+"online_news_popularity": {
+  "dataset": "online_news_popularity",
+  "n_trials": 20,
+  "n_samples": 4000,
+  "n_features": 11,
+  "best_trial": 12,
+  "best_value": 0.3938888426468781,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.04688222712581944,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 8,
+    "learning_rate": 0.003849733286091486,
+    "n_estimators": 300,
+    "subsample": 0.528442468325576,
+    "colsample_bytree": 0.9333243204496001
+  }
+},
+"king_county_housing": {
+  "dataset": "king_county_housing",
+  "n_trials": 20,
+  "n_samples": 17290,
+  "n_features": 17,
+  "best_trial": 3,
+  "best_value": 0.23483946116846577,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.42336633915053523,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 8,
+    "learning_rate": 0.10693112152264957,
+    "n_estimators": 300,
+    "subsample": 0.8232052812016968,
+    "colsample_bytree": 0.6069124060653043
+  }
+},
+"german_credit": {
+  "dataset": "german_credit",
+  "n_trials": 20,
+  "n_samples": 800,
+  "n_features": 7,
+  "best_trial": 1,
+  "best_value": 0.18313073678492753,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.2881700399525985,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 7,
+    "learning_rate": 0.017588568033720726,
+    "n_estimators": 300,
+    "subsample": 0.5145069122121801,
+    "colsample_bytree": 0.8668741481401414
+  }
+},
+"diabetes": {
+  "dataset": "diabetes",
+  "n_trials": 20,
+  "n_samples": 353,
+  "n_features": 10,
+  "best_trial": 15,
+  "best_value": 0.21676492887578888,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.03185945499059829,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 8,
+    "learning_rate": 0.057270820058133845,
+    "n_estimators": 300,
+    "subsample": 0.6198856406164459,
+    "colsample_bytree": 0.6976328640824316
+  }
+},
+"covertype": {
+  "dataset": "covertype",
+  "n_trials": 20,
+  "n_samples": 8000,
+  "n_features": 54,
+  "best_trial": 8,
+  "best_value": 0.35620046049942905,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.4160894921944404,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 6,
+    "learning_rate": 0.09782060427153436,
+    "n_estimators": 300,
+    "subsample": 0.836088639738088,
+    "colsample_bytree": 0.8143928979410806
+  }
+},
+"california_housing": {
+  "dataset": "california_housing",
+  "n_trials": 20,
+  "n_samples": 16512,
+  "n_features": 8,
+  "best_trial": 5,
+  "best_value": 0.4516488285484761,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.13735424765437482,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 5,
+    "learning_rate": 0.11594465739292677,
+    "n_estimators": 300,
+    "subsample": 0.6490017503443813,
+    "colsample_bytree": 0.6311524112981908
+  }
+},
+"bank_marketing": {
+  "dataset": "bank_marketing",
+  "n_trials": 20,
+  "n_samples": 8000,
+  "n_features": 7,
+  "best_trial": 13,
+  "best_value": 0.292227996672043,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.09212748555987632,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 5,
+    "learning_rate": 0.19215618238229173,
+    "n_estimators": 300,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8
+  }
+},
+ "adult_numeric": {
+  "dataset": "adult_numeric",
+  "n_trials": 20,
+  "n_samples": 4000,
+  "n_features": 11,
+  "best_trial": 12,
+  "best_value": 0.13231665139077015,
+  "best_params": {
+    "n_timesteps": 20,
+    "sig": 0.1493536894348029,
+    "eps": 0.05,
+    "n_iterations": 10,
+    "max_depth": 5,
+    "learning_rate": 0.19401963994094865,
+    "n_estimators": 300,
+    "subsample": 0.6386502760604652,
+    "colsample_bytree": 0.8530097454715656
+  }
+}
 }

@@ -234,7 +234,10 @@ def main():
     results_summary = {'successful': [], 'failed': [], 'total': len(all_datasets)}
     evaluator = MetricsEvaluator(include_authenticity=True, include_c2st=False)
     
+    # for dataset_name, X_full in all_datasets.items():
     for dataset_name, X_full in all_datasets.items():
+        if dataset_name != 'online_news_popularity':
+            continue
         if dataset_name not in summary:
             print(f"\n⚠️ No params for '{dataset_name}'")
             results_summary['failed'].append({'dataset': dataset_name, 'reason': 'No Optuna params'})
