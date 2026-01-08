@@ -17,11 +17,13 @@ This repository provides:
    - 5-fold cross-validation with stratified splits
    - 20+ evaluation metrics (distribution, utility, privacy, correlation)
    - Automatic Optuna hyperparameter optimization
-   - Aggregation with outlier-aware visualization
+   - Camparison with real data baseline, TabDDPM, CTGAN, TabSyn
+   - Aggregation with visualization
+   
 
 3. **Research Extensions**
    - VAE preprocessing for categorical data handling
-   - Dimensionality reduction (compression 100→8 dimensions)
+   - Dimensionality reduction (compression dimensions)
 
 ---
 
@@ -186,9 +188,8 @@ python experiments/aggregate_all_models_comparison.py
 
 **Visualization Features**:
 - Per-metric outlier detection (IQR-based)
-- Value clamping with outlier labels (yellow boxes)
+- Value clamping with outlier labels (gray boxes)
 - Relative scaling for distribution metrics (prevents scale crushing)
-- Reference lines: utility metrics show y=0 (baseline)
 - Error bars: ± std across 5 folds
 
 ---
@@ -204,23 +205,23 @@ python experiments/aggregate_all_models_comparison.py
 
 **Training**: Iterative Markovian Fitting (IMF)
 - Alternate forward/backward direction learning
-- Each iteration: reciprocal projection using learned drift
+- Each IMF iteration: 2 reciprocal + 2 markovian projections using learned drift
 
 **Pros**: Flexible, good for research, natural continuous dynamics
-**Cons**: Slower training, higher memory, moderate quality
+**Cons**: Slowest training, higher memory, high quality
 
 ### XGBoost-DSBM (Discrete-Time, Trees)
 
 **Architecture**:
 - One XGBoost model per feature dimension
-- Discrete time bins (K=15 default)
+- Discrete time bins (K=20 default)
 - Per-dimension regression targets
 
-**Training**: IMF with tree-based drift approximation
+**Training**: IMF but with tree-based drift approximation
 - Explicit marginal projection: nearest-neighbor resampling
 - Per-iteration coupling improvement
 
-**Pros**: Fast training (3-5x), low memory, scalable
+**Pros**: Fast training (3-5x), low memory, scalable, adaptable for catgorical features
 **Cons**: Tree-specific hyperparameters, limited interpolation between bins
 
 ### ASBM (Discrete-Time, Adversarial)
@@ -233,9 +234,8 @@ python experiments/aggregate_all_models_comparison.py
 **Training**: IMF with adversarial learning
 - Alternating generator/discriminator updates
 - Exponential moving average for generator stability
-- High-quality synthesis from adversarial training
 
-**Pros**: Highest quality, best fidelity, well-studied
+**Pros**: moderate quality, best fidelity, well-studied
 **Cons**: Slowest training, highest memory, complex tuning
 
 ---
@@ -248,8 +248,7 @@ Applied **per-fold** to prevent data leakage:
 - Fitted on training data only → compute mean, std
 - Applied identically to both train and test
 - Ensures all features have comparable scales
-- Enables fair metric comparison across features
-- Required for stable DSBM training (Gaussian N(0,1) initialization)
+- Enables fair metric comparison across features and datasets
 
 ### VAE Extension (Categorical Handling)
 
@@ -355,7 +354,7 @@ Ensures target distribution preserved:
 ### Aggregation Approach 1: By Dataset
 
 **For each dataset**: Create 4 subplots (Correlation, Utility, Distribution, Privacy)
-- X-axis: Models (DSBM, ASBM, XGBoost-DSBM, DSBM-VAE, TabSyn)
+- X-axis: Models (DSBM, ASBM, XGBoost-DSBM, DSBM-VAE, TabSyn, CTGAN, TabDDPM)
 - Y-axis: Metric values
 - Grouped bars with error bars (± std across folds)
 - Outliers: Yellow labels show clamped values
@@ -427,13 +426,6 @@ These signed values enable direct comparison: baseline (0%) vs improvement/degra
 3. **Variance**: Report std across folds (uncertainty estimate)
 4. **Standard Practice**: Matches sklearn cross-validation conventions
 
-### Why Two Aggregation Approaches?
-
-1. **By Dataset**: Understand model performance on specific data characteristics
-2. **By Metric**: Identify which metrics differentiate models best
-3. **Complementary**: Together provide complete picture
-4. **Presentation**: Choose based on audience focus
-
 ---
 
 ## Research Contributions
@@ -449,13 +441,12 @@ These signed values enable direct comparison: baseline (0%) vs improvement/degra
 1. **20+ Metrics**: Distribution, utility, correlation, privacy in unified evaluator
 2. **5-Fold CV**: Stratified cross-validation with per-fold StandardScaler
 3. **Optuna Integration**: Bayesian hyperparameter optimization on StandardScaled data
-4. **Outlier-Aware Visualization**: IQR-based clamping prevents scale crushing
-
+   
 ### Research Extensions
 
-1. **VAE Preprocessing**: Handles categorical data, enables 13x compression
-2. **Attention Mechanism**: Auto-determined multi-head attention for tabular data
-3. **Reproducible Evaluation**: Deterministic pipeline with fixed seeds throughout
+1. **VAE Preprocessing**: Handles categorical data, enables compression
+3. **Attention Mechanism**: Auto-determined multi-head attention for tabular data
+4. **Reproducible Evaluation**: Deterministic pipeline with fixed seeds throughout
 
 ---
 
@@ -509,8 +500,6 @@ These signed values enable direct comparison: baseline (0%) vs improvement/degra
 
 - DSBM model: Cite Shi et al. (NeurIPS 2023)
 - ASBM model: Cite Gushchin et al. (NeurIPS 2024)
-- Evaluation framework: Reference this repository
-- VAE preprocessing: Reference ITMO implementation
 
 **Key Metrics**:
 
@@ -521,43 +510,11 @@ These signed values enable direct comparison: baseline (0%) vs improvement/degra
 
 ---
 
-## Troubleshooting
-
-### Optuna Results Not Loading
-
-Check: `results/optuna_results_{model}/SUMMARY.json` exists with best_params per dataset
-
-### 5-Fold Evaluation Fails on VAE
-
-Ensure: `vae_preprocessing_attention.py` in experiments/ directory, VAE epochs sufficient for convergence
-
-### Outliers Crush Visualization Scale
-
-Expected behavior: Values outside IQR bounds shown as yellow labels on clamped bars. Check outlier_info bounds in generated figures.
-
-### StandardScaler Statistics Inconsistent
-
-Verify: Different scaler fitted per fold (each fold independent), no data leakage from test to train
-
----
-
 ## Future Work
 
 1. **Categorical Handling**: Full native categorical support without one-hot encoding
 2. **Larger Datasets**: Extend to million-row tabular data
 3. **Mixed Types**: Direct handling of categorical, continuous, and ordinal features
-4. **Constraint Preservation**: Ensure synthetic data respects domain constraints
-5. **Online Learning**: Incremental synthetic data generation for streaming data
-
----
-
-## Contact & Support
-
-Questions about:
-- **Model implementations**: See `docs/classes_methods.md`
-- **Evaluation pipeline**: See `docs/evaluation_5fold_optuna_updated.md`
-- **Repository structure**: See `docs/ARCHITECTURE.md`
-- **Specific metrics**: See `evaluation_metrics.py` docstrings
 
 ---
 
