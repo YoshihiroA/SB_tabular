@@ -107,7 +107,7 @@ def create_and_train_xgboost_dsbm(X_train_full: np.ndarray, best_params: Dict[st
         if verbose:
             print(f"[XGBoost DSBM] Bridge initialized, n_features={bridge.n_features}, n_timesteps={bridge.n_timesteps}")
         
-        history = bridge.fit(n_iterations=10, 
+        history = bridge.fit(n_iterations=5, 
                              verbose=False)
         
         if verbose:
@@ -236,8 +236,8 @@ def main():
     
     # for dataset_name, X_full in all_datasets.items():
     for dataset_name, X_full in all_datasets.items():
-        if dataset_name != 'online_news_popularity':
-            continue
+        # if dataset_name != 'online_news_popularity':
+        #     continue
         if dataset_name not in summary:
             print(f"\n⚠️ No params for '{dataset_name}'")
             results_summary['failed'].append({'dataset': dataset_name, 'reason': 'No Optuna params'})

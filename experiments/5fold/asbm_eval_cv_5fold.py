@@ -89,7 +89,7 @@ def create_and_train_asbm(X_train_full: np.ndarray, best_params: Dict[str, Any],
         if verbose:
             print(f"[ASBM] Bridge initialized, D={bridge.D}, timesteps={bridge.num_timesteps}")
         
-        history = bridge.fit(imf_iters=10, inner_iters=3000, batch_size=min(256, m_train), lr_g=lr_g, lr_d=lr_d, layers_G_fw=layers_G, layers_G_bw=layers_G, layers_D_fw=layers_D, layers_D_bw=layers_D, verbose=False)
+        history = bridge.fit(imf_iters=5, inner_iters=3000, batch_size=min(256, m_train), lr_g=lr_g, lr_d=lr_d, layers_G_fw=layers_G, layers_G_bw=layers_G, layers_D_fw=layers_D, layers_D_bw=layers_D, verbose=False)
         
         if verbose:
             print(f"[ASBM] Training complete")

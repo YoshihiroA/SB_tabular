@@ -19,7 +19,7 @@ Example:
 
 import numpy as np
 from typing import List, Optional
-from XGBOOSTDSBM_COSRRECTED import (
+from models.DSBM_xgboost.XGBOOSTDSBM_COSRRECTED import (
     train_xgboost_drift,
     sample_sde_xgboost,
     XGBoostBridgeNet,

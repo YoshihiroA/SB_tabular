@@ -1,29 +1,9 @@
-# REFACTORED evaluation_metrics.py - Integration Guide
-
-## ✅ What Changed
-
-### Input Format (CRITICAL)
-**BEFORE:**
-```python
-evaluator.compute_all_metrics(
-    X_train_real, X_test_real, X_synth,
-    y_train_real, y_test_real, y_synth
-)
-```
-
-**NOW:**
-```python
-evaluator.compute_all_metrics(X_test, X_synth)
-# Where:
-# X_test shape: (n_samples, n_features + 1 target)
-# X_synth shape: (m_samples, n_features + 1 target)
-# Target is LAST column (index -1)
-```
+# evaluation_metrics.py - Integration Guide
 
 ### Data Handling
 ✅ **Automatically separates features from target** (last column)
 ✅ **Utility metrics internally split real data 80/20**
-✅ **Trains XGBoost on real_train, synth_train**
+✅ **Trains model on real_train, synth_train**
 ✅ **Tests on real_test ONLY (synth_test not used)**
 ✅ **Other metrics use FULL datasets (no split)**
 
@@ -253,7 +233,7 @@ y_synth = X_synth[:, -1]
 
 ---
 
-## ✅ What the Refactored Code Does
+## ✅ What the Code Does
 
 ### For Distribution/Correlation/Privacy/Detection Metrics:
 ```python
@@ -286,19 +266,6 @@ r2_synth = r2_score(y_test_real, y_pred_synth)
 
 ---
 
-## 🚀 Migration Checklist
-
-- [ ] Replace `evaluation_metrics.py` with `evaluation_metrics_refactored.py`
-- [ ] Update imports (if needed, should be same)
-- [ ] Change function call signature from 6 args to 2 args
-- [ ] Ensure data has target in last column
-- [ ] Test on sample data first
-- [ ] Run full 5-fold CV
-- [ ] Verify results match expected ranges
-- [ ] Save JSON output
-
----
-
 ## 📊 Expected Output
 
 ```python
@@ -328,67 +295,3 @@ metrics = evaluator.compute_all_metrics(X_test, X_synth)
     'authenticity': 0.8901
 }
 ```
-
----
-
-## 🔧 Troubleshooting
-
-### Issue: Target column not last
-**Fix:** Ensure your data has target as LAST column
-```python
-# If target is first column
-X = np.column_stack([X_features, X_target])  # target last
-```
-
-### Issue: Wrong number of features
-**Fix:** Check shape matches
-```python
-assert X_test.shape[1] == X_synth.shape[1], "Feature count mismatch"
-assert X_test.shape[1] > 1, "Need at least features + target"
-```
-
-### Issue: NaN in results
-**Fix:** Check data quality
-```python
-assert not np.isnan(X_test).any(), "NaN in X_test"
-assert not np.isnan(X_synth).any(), "NaN in X_synth"
-```
-
-### Issue: Memory error
-**Fix:** Reduce sample size for expensive metrics
-```python
-# Sample data if too large
-if X_test.shape[0] > 10000:
-    idx = np.random.choice(len(X_test), 10000, replace=False)
-    X_test = X_test[idx]
-```
-
----
-
-## 📚 File Locations
-
-```
-your_project/
-├── evaluation_metrics.py         ← Use refactored version
-├── dsbm_eval_cv_5fold.py        ← Update to use new API
-├── asbm_eval_cv_5fold.py        ← Update to use new API
-├── xgboostdsbm_eval_cv_5fold.py ← Update to use new API
-└── data/
-    ├── X_test_*.npy             ← Real test data
-    └── X_synth_*.npy            ← Synthetic data
-```
-
----
-
-## ✅ You're Ready!
-
-1. Use `evaluation_metrics_refactored.py` (rename to `evaluation_metrics.py`)
-2. Call: `evaluator.compute_all_metrics(X_test, X_synth)`
-3. Get back dict with 20+ metrics
-4. That's it!
-
----
-
-**Version**: 2.0 (Refactored)
-**Status**: Ready for Use
-**Last Updated**: December 28, 2025

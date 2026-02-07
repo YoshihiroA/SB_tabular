@@ -1,0 +1,9 @@
+Tier,Model,Avg Corr_distance,Datasets,Status
+1,Statsy,2.14,7,✓ BEST
+2,LightSB,3.29,7,✓
+3,DSBM,3.43,7,✓
+4,DSB,4.14,7,
+5,CTGAN,4.43,7,
+6,TabDDPM,5.29,7,
+7,AdvSB,5.43,7,
+8,TabSyn,7.86,7,

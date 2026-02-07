@@ -24,7 +24,7 @@ import optuna
 from optuna.samplers import TPESampler
 
 try:
-    from asbm_tabular_bridge import ASBMTabularBridge
+    from models.ASBM.asbm_tabular_bridge import ASBMTabularBridge
 except ImportError:
     print("❌ Error: asbm_tabular_bridge.py not found")
     print("   Make sure it's in the same directory")
@@ -218,8 +218,8 @@ def objective(
         
         # Train ASBM
         history = bridge.fit(
-            imf_iters=1,
-            inner_iters=30,  # Reduced for speed
+            imf_iters=5,
+            inner_iters=3000,  # Reduced for speed
             batch_size=actual_batch_size,
             lr_g=lr_g,
             lr_d=lr_d,
@@ -504,7 +504,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--pkl-file",
         type=str,
-        default="datasets_numeric_merged.pkl",
+        default="datasets/datasets_numeric_merged.pkl",
         help="Path to merged pickle file"
     )
     
@@ -519,7 +519,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--n-trials",
         type=int,
-        default=1,
+        default=20,
         help="Number of trials per dataset (default: 20)"
     )
     
@@ -527,13 +527,13 @@ if __name__ == "__main__":
         "--train-size",
         type=float,
         default=0.8,
-        help="Train/test split ratio (default: 0.75)"
+        help="Train/test split ratio (default: 0.8)"
     )
     
     parser.add_argument(
         "--results-dir",
         type=str,
-        default="optuna_results_asbm_83",
+        default="results/optuna_results/optuna_results_asbm",
         help="Directory to save individual result JSON files"
     )
     

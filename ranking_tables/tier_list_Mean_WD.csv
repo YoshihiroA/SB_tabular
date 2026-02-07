@@ -1,0 +1,9 @@
+Tier,Model,Avg Mean_WD,Datasets,Status
+1,CTGAN,2.57,7,✓ BEST
+2,DSBM,2.86,7,✓
+3,LightSB,3.29,7,✓
+4,TabDDPM,3.57,7,
+5,AdvSB,4.57,7,
+6,DSB,5.43,7,
+7,Statsy,6.71,7,
+8,TabSyn,7.00,7,

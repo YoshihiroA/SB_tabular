@@ -36,13 +36,13 @@ warnings.filterwarnings('ignore')
 
 # Import ASBM and metrics
 try:
-    from asbm_tabular_bridge import ASBMTabularBridge
+    from models.ASBM.asbm_tabular_bridge import ASBMTabularBridge
 except ImportError:
     print("❌ Error: asbm_tabular_bridge.py not found")
     exit(1)
 
 try:
-    from synthetic_data_metrics import evaluate_synthetic_data
+    from experiments.synthetic_data_metrics import evaluate_synthetic_data
 except ImportError:
     print("❌ Error: synthetic_data_metrics.py not found")
     exit(1)

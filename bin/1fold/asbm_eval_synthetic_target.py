@@ -32,13 +32,13 @@ warnings.filterwarnings('ignore')
 
 # Import ASBM and metrics
 try:
-    from asbm_tabular_bridge import ASBMTabularBridge
+    from models.ASBM.asbm_tabular_bridge import ASBMTabularBridge
 except ImportError:
     print("❌ Error: asbm_tabular_bridge.py not found")
     exit(1)
 
 try:
-    from synthetic_data_metrics import evaluate_synthetic_data
+    from experiments.synthetic_data_metrics import evaluate_synthetic_data
 except ImportError:
     print("❌ Error: synthetic_data_metrics.py not found")
     exit(1)
@@ -522,8 +522,8 @@ def create_metric_plots(results: Dict[str, Dict], output_dir: str):
             real_val = successful[ds]['metrics'].get(metric_real)
             if metric_synth is None:
                 if real_val is not None:
-                    real_values.append(real_val)
-                    synth_values.append(real_val)
+                    # real_values.append(real_val)
+                    # synth_values.append(real_val)
                     valid_datasets.append(ds)
             else:
                 synth_val = successful[ds]['metrics'].get(metric_synth)
@@ -588,8 +588,8 @@ def print_evaluation_summary(results: Dict[str, Dict]):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--summary-file", default="optuna_results_asbm/SUMMARY.json")
-    parser.add_argument("--pkl-file", default="datasets_numeric_merged.pkl")
+    parser.add_argument("--summary-file", default="results/optuna_results/optuna_results_asbm/SUMMARY.json")
+    parser.add_argument("--pkl-file", default="datasets/datasets_numeric_merged.pkl")
     parser.add_argument("--datasets", nargs="+", default=None)
     parser.add_argument("--no-plots", action="store_true")
     args = parser.parse_args()

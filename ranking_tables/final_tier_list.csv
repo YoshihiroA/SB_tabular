@@ -1,0 +1,9 @@
+Tier,Model,Avg Rank Sum,Datasets,Status
+1,DSBM,9.29,7,✓ BEST
+2,CTGAN,11.00,7,✓
+3,TabDDPM,11.29,7,✓
+4,LightSB,12.43,7,
+5,Statsy,13.71,7,
+6,AdvSB,13.86,7,
+7,DSB,14.57,7,
+8,TabSyn,21.86,7,

@@ -160,32 +160,3 @@ where:
 
 **Marginal Preservation**: Implicit (alternating anchoring)
 
----
-
-## Summary Comparison
-
-| Aspect | DSBM | XGBoost-DSBM | ASBM |
-|--------|------|--------------|------|
-| **Formulation** | Equations 1-4 | Equations 1-4 | Equations 15-16 |
-| **Time** | Continuous | Discrete bins | Discrete steps |
-| **Network Training** | Regression (MLP) | Gradient boosting (Trees) | Adversarial (GAN) |
-| **Networks** | 2 (fwd/bwd) | 2d ensembles | 4 (2 Gen + 2 Disc) |
-| **Inference Steps** | 100-200 | 100-200 | 4-10 |
-| **Speed** | 1× | 1× | 25× |
-| **Projection** | Implicit | **Explicit** | Implicit |
-| **Device** | GPU | CPU | GPU |
-
----
-
-## Model Selection
-
-| Use Case | Model | Reason |
-|----------|-------|--------|
-| Large continuous datasets | DSBM | GPU-accelerated, proven |
-| Small tabular data | XGBoost-DSBM | Sample efficient |
-| Real-time inference | ASBM | 25× faster |
-| Interpretability | XGBoost-DSBM | Feature importance |
-| CPU-only | XGBoost-DSBM | No GPU needed |
-| High-dimensional | XGBoost-DSBM | Feature grouping |
-
----

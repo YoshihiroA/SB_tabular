@@ -36,13 +36,13 @@ warnings.filterwarnings('ignore')
 
 # Import XGBoost DSBM and metrics
 try:
-    from xgboostdsbm_tabular_bridge import XGBoostDSBMTabularBridge
+    from models.DSBM_xgboost.xgboostdsbm_tabular_bridge import XGBoostDSBMTabularBridge
 except ImportError:
     print("❌ Error: xgboostdsbm_tabular_bridge.py not found")
     exit(1)
 
 try:
-    from synthetic_data_metrics import evaluate_synthetic_data
+    from experiments.synthetic_data_metrics import evaluate_synthetic_data
 except ImportError:
     print("❌ Error: synthetic_data_metrics.py not found")
     exit(1)
@@ -658,9 +658,9 @@ if __name__ == "__main__":
         description="XGBoost DSBM Evaluation with CatBoost for Consistency"
     )
     
-    parser.add_argument("--params-file", default="optuna_results_xgboost_dsbm/SUMMARY.json",
+    parser.add_argument("--params-file", default="results/optuna_results/optuna_results_xgboost_dsbm/SUMMARY.json",
                         help="Path to SUMMARY.json (any format)")
-    parser.add_argument("--pkl-file", default="datasets_numeric_merged.pkl",
+    parser.add_argument("--pkl-file", default="datasets/datasets_numeric_merged.pkl",
                         help="Path to pickle file")
     parser.add_argument("--datasets", nargs="+", default=None,
                         help="Specific datasets to evaluate")

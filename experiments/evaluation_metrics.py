@@ -470,12 +470,12 @@ def compute_utility_metrics(X_real: np.ndarray, X_synth: np.ndarray) -> Dict[str
         X_synth_feat, y_synth = separate_features_and_target(X_synth)
         
         # Train XGBoost on REAL train data
-        model_real = xgb.XGBRegressor(n_estimators=100, random_state=42, verbosity=0)
+        model_real = xgb.XGBRegressor(n_estimators=500, max_depth=6, random_state=42, verbosity=0, n_jobs=-1)
         model_real.fit(X_train_real, y_train_real, verbose=False)
         y_pred_real = model_real.predict(X_test_real)
         
         # Train XGBoost on SYNTHETIC train data
-        model_synth = xgb.XGBRegressor(n_estimators=100, random_state=42, verbosity=0)
+        model_synth = xgb.XGBRegressor(n_estimators=500, max_depth=6,  random_state=42, verbosity=0, n_jobs=-1)
         model_synth.fit(X_synth_feat, y_synth, verbose=False)
         # Test on REAL test set (NOT synthetic test)
         y_pred_synth = model_synth.predict(X_test_real)
@@ -819,10 +819,3 @@ class MetricsEvaluator:
             metrics.extend(['c2st_accuracy', 'c2st_auc', 'c2st_p_value'])
         
         return metrics
-
-
-if __name__ == "__main__":
-    print("✅ Metrics library loaded successfully")
-    evaluator = MetricsEvaluator()
-    print(f"Available metrics: {len(evaluator.get_enabled_metrics())}")
-    print(f"Metrics: {evaluator.get_enabled_metrics()}")

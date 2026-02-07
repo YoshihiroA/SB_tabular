@@ -116,6 +116,9 @@ def load_dataset(pkl_file: str, dataset_name: str) -> np.ndarray:
 
         X_full = raw_data[dataset_name].to_numpy().astype(np.float32)
 
+    if dataset_name in ["adult_numeric", "king_county_housing"]:
+        X_full = X_full[:, [-1, 2]]
+
     return X_full
 
 def load_all_datasets(pkl_file: str = "datasets/datasets_numeric_merged.pkl") -> Dict[str, np.ndarray]:

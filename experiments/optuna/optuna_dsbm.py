@@ -518,14 +518,14 @@ if __name__ == "__main__":
         "--datasets",
         type=str,
         nargs="+",
-        default=None,
+        default=None, #["california housing", "diabetes", "online news popularity", "king county housing", "adult numeric"]
         help="Specific datasets to tune (default: all)"
     )
 
     parser.add_argument(
         "--n-trials",
         type=int,
-        default=2,
+        default=20,
         help="Number of trials per dataset (default: 20)"
     )
 
@@ -539,7 +539,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--results-dir",
         type=str,
-        default="results/optuna_results/optuna_results_dsbm_83",
+        default="results/optuna_results/optuna_results_dsbm",
         help="Directory to save individual result JSON files"
     )
 

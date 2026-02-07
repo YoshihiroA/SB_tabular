@@ -142,27 +142,27 @@ class DSBM(nn.Module):
 
 
 # Redefine train_asbm function
-def train_dsbm(asbm_ipf, x_pairs, batch_size, inner_iters, lr, prev_model=None, fb='', first_it=False):
+def train_dsbm(dsbm_ipf, x_pairs, batch_size, inner_iters, lr, prev_model=None, fb='', first_it=False):
   assert fb in ['f', 'b']
-  asbm_ipf.fb = fb
-  optimizer = torch.optim.Adam(asbm_ipf.net_dict[fb].parameters(), lr=lr)
+  dsbm_ipf.fb = fb
+  optimizer = torch.optim.Adam(dsbm_ipf.net_dict[fb].parameters(), lr=lr)
   loss_curve = []
 
-  dl = iter(DataLoader(TensorDataset(*asbm_ipf.generate_new_dataset(x_pairs, prev_model=prev_model, fb=fb, first_it=first_it)),
+  dl = iter(DataLoader(TensorDataset(*dsbm_ipf.generate_new_dataset(x_pairs, prev_model=prev_model, fb=fb, first_it=first_it)),
                        batch_size=batch_size, shuffle=True, pin_memory=False, drop_last=True))
 
   for i in range(inner_iters):
     try:
       z0, z1 = next(dl)
     except StopIteration:
-      dl = iter(DataLoader(TensorDataset(*asbm_ipf.generate_new_dataset(x_pairs, prev_model=prev_model, fb=fb, first_it=first_it)),
+      dl = iter(DataLoader(TensorDataset(*dsbm_ipf.generate_new_dataset(x_pairs, prev_model=prev_model, fb=fb, first_it=first_it)),
                            batch_size=batch_size, shuffle=True, pin_memory=False, drop_last=True))
       z0, z1 = next(dl)
 
     z_pairs = torch.stack([z0, z1], dim=1)
-    z_t, t, target = asbm_ipf.get_train_tuple(z_pairs, fb=fb, first_it=first_it)
+    z_t, t, target = dsbm_ipf.get_train_tuple(z_pairs, fb=fb, first_it=first_it)
     optimizer.zero_grad()
-    pred = asbm_ipf.net_dict[fb](z_t, t)
+    pred = dsbm_ipf.net_dict[fb](z_t, t)
     loss = (target - pred).view(pred.shape[0], -1).abs().pow(2).sum(dim=1)
 
     loss = loss.mean()
@@ -174,7 +174,7 @@ def train_dsbm(asbm_ipf, x_pairs, batch_size, inner_iters, lr, prev_model=None, 
     optimizer.step()
     loss_curve.append(np.log(loss.item()))
 
-  return asbm_ipf, loss_curve
+  return dsbm_ipf, loss_curve
 
 
 class DSBMTabularBridge:

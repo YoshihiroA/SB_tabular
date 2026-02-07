@@ -1,0 +1,9 @@
+Tier,Model,Avg Mean_KL,Datasets,Status
+1,TabDDPM,2.43,7,✓ BEST
+2,DSBM,3.00,7,✓
+3,AdvSB,3.86,7,✓
+4,CTGAN,4.00,7,
+5,Statsy,4.86,7,
+6,DSB,5.00,7,
+7,LightSB,5.86,7,
+8,TabSyn,7.00,7,
